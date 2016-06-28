@@ -8,7 +8,7 @@ import styles from './index.css';
 
 
 
-export class Main extends React.Component {
+export class Email extends React.Component {
 	constructor(props)
 	{
 		super(props);
@@ -16,7 +16,7 @@ export class Main extends React.Component {
     render() {
 
         return <div className={ styles.root }>
-			I am Main Component
+			An Email
 		</div>;
     }
 }
@@ -36,4 +36,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Main)
+)(Email)
