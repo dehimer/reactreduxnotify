@@ -15,7 +15,10 @@ export class Home extends React.Component {
     render() {
 
         return <div className={ styles.root }>
+			Главная
+			<br/>
 			<button onClick={ e=>this.onClickHandler(e, true) }>Предупреждающее уведомление</button>
+			<br/>
 			<button onClick={ e=>this.onClickHandler(e, false) }>Информационное уведомление</button>
 		</div>;
     }

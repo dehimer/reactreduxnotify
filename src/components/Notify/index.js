@@ -12,10 +12,17 @@ export class Notify extends React.Component {
 		super();
 		this.state = {resettimeoutf:false};
 	}
+	// shouldComponentUpdate (nextProps) {
+	// 	return (this.props.note && this.props.note.message) !== (nextProps.note && nextProps.note.message);
+	// }
 	componentDidUpdate() {
 
 		clearTimeout(this.state.resettimeoutf);
-		this.state.resettimeoutf = setTimeout(this.props.resetnotify, 3000);  
+
+		if(this.props.note && this.props.note.text)
+		{
+			this.state.resettimeoutf = setTimeout(this.props.resetnotify, 3000);  
+		}
 
 	}
     render() {

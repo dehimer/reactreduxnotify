@@ -11,8 +11,7 @@ import App from './components/App';
 import Home from './components/Home';
 import Email from './components/Email';
 
-const initialAppState = {
-};
+const initialAppState = {};
 
 
 const store = configureStore(initialAppState);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { notify } from 'actions'
+import { notify, sendemail } from 'actions'
 
 
 import styles from './index.css';
@@ -23,7 +23,9 @@ export class Email extends React.Component {
 		}
 		else
 		{
-			//send
+			console.log(this.state);
+			this.props.sendemail(this.state.email, this.state.props);
+			this.setState({email:'', text:''});
 		}
 
 	}
@@ -55,15 +57,15 @@ export class Email extends React.Component {
     }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps() {
 	return {
-		state: state
 	}
 }
 
 function mapDispatchToProps(dispatch) {
 	return {
-		notify: bindActionCreators(notify, dispatch)
+		notify: bindActionCreators(notify, dispatch),
+		sendemail: bindActionCreators(sendemail, dispatch)
 	}
 }
 
