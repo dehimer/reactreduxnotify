@@ -9,14 +9,14 @@ import styles from './index.css';
 
 
 export class Home extends React.Component {
-	constructor(props)
-	{
-		super(props);
+	onClickHandler(e, iswarning) {
+		this.props.notify(e.target.innerText, iswarning);
 	}
     render() {
 
         return <div className={ styles.root }>
-			Home
+			<button onClick={ e=>this.onClickHandler(e, true) }>Предупреждающее уведомление</button>
+			<button onClick={ e=>this.onClickHandler(e, false) }>Информационное уведомление</button>
 		</div>;
     }
 }
