@@ -16,10 +16,10 @@ export class Email extends React.Component {
 		this.state = {email:'', text:''};
 	}
 	onSubmitClicked() {
-		if(this.state.email === '')
-		{
-			this.props.notify('Укажите email получателя', 'error');
-		}
+		const message = (this.state.email === '')?'Укажите email получателя':this.state.email;
+		const iswarning = (this.state.email === '')?true:false;
+		
+		this.props.notify(message, iswarning);
 	}
     render() {
 

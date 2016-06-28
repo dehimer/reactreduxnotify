@@ -1,11 +1,11 @@
 export const NOTIFY = 'NOFIFY';
 
-export function notify (text, type) {
+export function notify (text, iswarning) {
 	return {
 		type: NOTIFY,
 		payload: {
 			text: text,
-			type: type
+			warning: iswarning
 		}
 	}
 }
