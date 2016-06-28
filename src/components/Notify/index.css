@@ -1,0 +1,11 @@
+.root {
+	padding: 5px;
+	margin: 5px;
+}
+
+.message {
+	padding: 5px;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+}

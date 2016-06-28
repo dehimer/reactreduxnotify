@@ -3,6 +3,8 @@ import { Link } from 'react-router'
 
 import styles from './index.css';
 
+import Notify from 'components/Notify';
+
 export default function App({ children }) {
     return (
         <div>
@@ -16,7 +18,10 @@ export default function App({ children }) {
                     <button>Отправить письмо</button>
                 </Link>
             </header>
-        <div style={{ marginTop: '1.5em' }}>{children}</div>
-    </div>
-  )
+            <Notify/>
+            <div style={{ marginTop: '1.5em' }}>
+                {children}
+            </div>
+        </div>
+    )
 }

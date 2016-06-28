@@ -9,3 +9,14 @@ export function notify (text, iswarning) {
 		}
 	}
 }
+
+export function resetnotify () {
+	console.log('resetnotify');
+	return {
+		type: NOTIFY,
+		payload: {
+			text: '',
+			warning: false
+		}
+	}
+}
