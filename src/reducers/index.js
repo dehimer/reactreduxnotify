@@ -1,11 +1,6 @@
-import { NOFIFY } from 'actions';
+import { combineReducers } from 'redux'
+import note from './note'
 
-export default function rootReducer (state, action) {
-	switch (action.type)
-	{
-		case NOFIFY:
-			return {...state}
-		default:
-			return state;
-	}
-}
+export default combineReducers({
+  note
+})

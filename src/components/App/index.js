@@ -1,14 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router'
 
+import styles from './index.css';
+
 export default function App({ children }) {
     return (
         <div>
-            <header>
+            <header className={ styles.header }>
                 {' '}
-                <Link to='/'>Home</Link>
+                <Link to='/'>
+                    <button>Главная</button>
+                </Link>
                 {' '}
-                <Link to='/email'>Send an Email</Link>
+                <Link to='/email'>
+                    <button>Отправить письмо</button>
+                </Link>
             </header>
         <div style={{ marginTop: '1.5em' }}>{children}</div>
     </div>

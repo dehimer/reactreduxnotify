@@ -1,5 +1,5 @@
 import { createStore, compose, combineReducers } from 'redux'
-import reducers from '../reducers';
+import rootReducer from '../reducers';
 
 import { routerReducer } from 'react-router-redux'
 
@@ -8,7 +8,7 @@ export default function configureStore (initialState) {
 
 	const store = createStore(
 		combineReducers({
-			...reducers,
+			rootReducer,
 			routing: routerReducer
 		}),
 		initialState,
