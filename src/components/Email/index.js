@@ -16,8 +16,16 @@ export class Email extends React.Component {
     render() {
 
         return <div className={ styles.root }>
-			An Email
-		</div>;
+			<div className={ styles.input_group }>
+				<label for='email' className={ styles.label }>Email получателя:</label>
+				<input id='email' type='email'/>
+			</div>
+			<div className={ styles.input_group }>
+				<label for='text' className={ styles.label }>Сообщение:</label>
+				<input id='text' type='text'/>
+			</div>
+			<input type='button' value='Отправить' className={ styles.submit }/>
+		</div>
     }
 }
 

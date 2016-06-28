@@ -1,3 +1,24 @@
 .root {
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
 
+	text-align: right;
+}
+
+.input_group {
+	text-align: initial;
+	margin-bottom: 5px;
+}
+
+.label {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 150px;
+}
+
+.submit {
+	/*float: right;*/
+	margin-top: 5px;
 }
