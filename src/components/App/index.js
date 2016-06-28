@@ -19,7 +19,7 @@ export default function App({ children }) {
                 </Link>
             </header>
             <Notify/>
-            <div style={{ marginTop: '1.5em' }}>
+            <div>
                 {children}
             </div>
         </div>

@@ -34,6 +34,8 @@ export class Notify extends React.Component {
 		if(message)
 		{
 			message_style.backgroundColor = iswarning?'#f90':'#09f';
+			message_style.padding = '5px';
+			message_style.margin = '10px';
 		}
 
         return <div className={ styles.root }>
